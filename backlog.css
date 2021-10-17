@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    margin-block-end: -3px;
+}
+
+.overlay-container {
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 70px;
+}
+
+.backlog-header {
+    margin-bottom: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: darkblue;
+}
