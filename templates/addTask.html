@@ -12,7 +12,83 @@
 <body onload="includeHTML()">
 <div w3-include-html="header.html"></div> <!-- funktioniert noch nicht -->
 
-    test
+<div class="main">
+    <div class="top-container">
+        <div class="top-container-addtask"> 
+            Add Task
+        </div>
+        <div class="top-container-text"> 
+            Learning Management System Project
+        </div>
+    </div>
+
+    <div class="lower-container">
+        <div class="lower-container-left">
+            <div class="title">
+                <div class="lower-container-heading"> 
+                    Title
+                </div>
+                <input placeholder="Add Title here" class="title-input" id="title-input"> </input>
+            </div>
+            <div class="category">
+                <div class="lower-container-heading">
+                    Category
+                </div>
+                <div id="category-dropdown">
+                    Dropdown-Placeholder
+                </div>
+            </div>
+            <div class="description">
+                <div class="lower-container-heading">
+                    Category
+                </div>
+                <input placeholder="Add Description here" class="description-input" id="description-input"> </input>
+            </div>
+        </div>
+        <div class="lower-container-right">
+            <div class="due-date">
+                <div class="lower-container-heading"> 
+                    Due Date
+                </div>
+                    <div class="due-date-two-containers">
+                        <div id="due-date-input">
+                            Due Date Placeholder
+                        </div>
+                        <div>
+                            Calender Icon Placeholder
+                        </div>
+                    </div>
+            </div>
+            <div class="urgency">
+                <div class="lower-container-heading"> 
+                    Urgency
+                </div>
+                <div id="urgency-dropdown">
+                    Urgency Dropdown Placeholder
+                </div>
+            </div>
+            <div class="assigned-to">
+                <div class="lower-container-heading"> 
+                    Assigned to
+                </div>
+                <div class="assigned-to-pics">
+                    <div id="assigned-to"> 
+                        Placeholder pictures
+                    </div>
+                </div>
+                <div class="cancel-and-create-buttons">
+                    <button id="btn-cancel"> Cancel </button>
+                    <button id="btn-create-task"> Create Task </button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
 
 </body>
 </html>

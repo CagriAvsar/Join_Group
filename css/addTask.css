@@ -1,3 +1,32 @@
 body{
     
 }
+.lower-container{
+    height: 800px;
+    width: 1000px;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row;
+}
+.lower-container-left{
+    height: 600px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.due-date-two-containers{
+    display: flex;
+    flex-direction: row;
+}
+.lower-container-heading{
+    color: blue;
+    font-size: 22px;
+}
+.lower-container-right{
+    height: 600px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
