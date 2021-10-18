@@ -1,4 +1,9 @@
-let users = [];
+let users = [{
+    'name': [],
+    'email': [],
+    'category': [],
+    'description': []
+}];
 
 setURL('http://developerakademie.com/smallest_backend_ever');
 

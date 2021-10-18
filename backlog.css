@@ -7,6 +7,13 @@ h1 {
     margin-block-end: -3px;
 }
 
+aside ul {
+    list-style: none;
+    /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+}
+
 .overlay-container {
     padding-right: 100px;
     padding-left: 100px;
