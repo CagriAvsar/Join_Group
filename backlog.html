@@ -15,12 +15,16 @@
     <!-- includes backlog -->
     <script src="backlog.js"></script>
     <!-- includes footer -->
-    <script src="includehtml.js"></script>
-    <link rel="stylesheet" href="backlog.css">
+    <script src="Join_Group/js/includeHTML.js"></script>
+    <link rel="stylesheet" href="/Join_Group/css/backlog.css">
+    <link rel="stylesheet" href="/Join_Group/css/sidebar.css">
+    <link rel="stylesheet" href="/Join_Group/css/overall.css">
     <title>Backlog</title>
 </head>
 
-<body onload="init()">
+<body onload="init(), includeHTML()">
+
+    <div w3-include-html="/Join_Group/templates/sidebar.html"></div>
 
     <div class="overlay-container">
         <div class="backlog-header">
@@ -33,10 +37,13 @@
             <a href="#">CATEGORY</a>
             <a href="#">DETAILS</a>
         </nav>
-    </div>
 
-    <!-- footer included -->
-    <div w3-include-html="footer.html"></div>
+        <div>
+            <!-- footer included -->
+            <footer w3-include-html="Join_Group/templates/footer.html"></footer>
+        </div>
+
+    </div>
 
 </body>
 
