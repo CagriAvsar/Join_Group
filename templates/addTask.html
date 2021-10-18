@@ -26,32 +26,37 @@
         <div class="lower-container-left">
             <div class="title">
                 <div class="lower-container-heading"> 
-                    Title
+                    TITLE
                 </div>
-                <input placeholder="Add Title here" class="title-input" id="title-input"> </input>
+                <input placeholder="Add Title here" class="title-input field" id="title-input"> </input>
             </div>
             <div class="category">
-                <div class="lower-container-heading">
-                    Category
+                <div class="lower-container-heading field">
+                    CATEGORY
                 </div>
-                <div id="category-dropdown">
-                    Dropdown-Placeholder
+                <div class="field">
+                    <select placeholder="Management" id="category-dropdown">
+                            <option> Management </option>
+                            <option> Marketing </option>
+                            <option> Development </option>
+                            <option> Design </option>
+                    </select>
                 </div>
             </div>
             <div class="description">
-                <div class="lower-container-heading">
-                    Category
+                <div class="lower-container-heading field">
+                    DESCRIPTION
                 </div>
-                <input placeholder="Add Description here" class="description-input" id="description-input"> </input>
+                <input placeholder="Add Description here" class="description-input field" id="description-input"> </input>
             </div>
         </div>
         <div class="lower-container-right">
             <div class="due-date">
                 <div class="lower-container-heading"> 
-                    Due Date
+                    DUE DATE
                 </div>
                     <div class="due-date-two-containers">
-                        <div id="due-date-input">
+                        <div id="due-date-input" class="field">
                             Due Date Placeholder
                         </div>
                         <div>
@@ -61,15 +66,20 @@
             </div>
             <div class="urgency">
                 <div class="lower-container-heading"> 
-                    Urgency
+                    URGENCY
                 </div>
-                <div id="urgency-dropdown">
-                    Urgency Dropdown Placeholder
+                <div class="field">
+                    <select placeholder="Very High" id="urgency-dropdown">
+                        <option> Very High </option>
+                        <option> High </option>
+                        <option> Middle </option>
+                        <option> Low </option>
+                </select>
                 </div>
             </div>
             <div class="assigned-to">
                 <div class="lower-container-heading"> 
-                    Assigned to
+                    ASSIGNED TO
                 </div>
                 <div class="assigned-to-pics">
                     <div id="assigned-to"> 
@@ -78,7 +88,7 @@
                 </div>
                 <div class="cancel-and-create-buttons">
                     <button id="btn-cancel"> Cancel </button>
-                    <button id="btn-create-task"> Create Task </button>
+                    <button onclick="addTask()"id="btn-create-task"> Create Task </button>
                 </div>
 
 

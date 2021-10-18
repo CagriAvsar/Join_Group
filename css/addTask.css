@@ -1,12 +1,11 @@
-body{
-    
-}
+
 .lower-container{
-    height: 800px;
+    height: 600px;
     width: 1000px;
     background-color: lightgrey;
     display: flex;
     flex-direction: row;
+    padding: 50px;
 }
 .lower-container-left{
     height: 600px;
@@ -29,4 +28,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.field{
+    height: 50px;
+    width: 300px;
+}
+.description-input{
+    height: 200px;
+    width: 300px;
 }
