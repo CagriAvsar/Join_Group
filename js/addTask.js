@@ -66,4 +66,10 @@ function includeHTML() {
     
   }
 
+  function pickDate(){
+    const input = document.getElementById('due-date-input');
+    const datepicker = new TheDatepicker.Datepicker(input);
+    datepicker.render();
+  }
+
 

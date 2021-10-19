@@ -1,4 +1,6 @@
-
+body{
+    font-family: 'PT Sans', sans-serif;
+}
 .lower-container{
     height: 600px;
     width: 1000px;
@@ -32,8 +34,40 @@
 .field{
     height: 50px;
     width: 300px;
+    
 }
 .description-input{
     height: 200px;
     width: 300px;
+}
+
+.input-and-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn-dropdown{
+    border: none;
+    background: white;
+    height: 45px;
+    width: 45px;
+    margin-left: -50px;
+}
+
+.btn-create-task{
+    background-color: blue;
+    color: white;
+    height: 50px;
+    width: 130px;
+    border: solid 1px lightgrey;
+    border-radius: 15px;
+}
+
+.btn-cancel{
+    background-color: lightgrey;
+    color: black;
+    height: 50px;
+    width: 130px;
+    border: solid 1px lightgrey;
+    border-radius: 15px;
 }
