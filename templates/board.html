@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Board </title>
+    <link rel="stylesheet" href="../css/board.css">
+    <script src="../js/board.js">
+    </script>
+
+</head>
+<body onload="includeHTML()">
+<div w3-include-html="header.html"></div>  <!-- funktioniert noch nicht -->
+<div class="board-section">
+    <div class="double-column">
+        <div class="board-column">
+            <span class="head-off"><b>TO DO</b></span>
+            <div class="column-scroll">
+                <div class="todo" id="to_do" ondrop="moveTo('to_do')" ondragover="allowDrop(event)">
+                </div>
+            </div>
+        </div>
+        <div class="board-column">
+            <span class="head-off"><b>IN PROGRESS</b></span>
+            <div class="column-scroll">
+                <div id="in_progress" ondrop="moveTo('in_progress')" ondragover="allowDrop(event)"
+                    class="todo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="double-column">
+        <div class="board-column">
+            <span class="head-off"><b>TESTING</b></span>
+            <div class="column-scroll">
+                <div id="testing" ondrop="moveTo('testing')" ondragover="allowDrop(event)" class="todo">
+                </div>
+            </div>
+        </div>
+        <div class="board-column">
+            <span class="head-off"><b>DONE</b></span>
+            <div class="column-scroll">
+                <div id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)" class="todo"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
