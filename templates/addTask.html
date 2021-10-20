@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Add Tasks </title>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/addTask.css">
+    <!-- Date Picker -->
+    <link href="thedatepicker-master/dist/the-datepicker.css" rel="stylesheet">
+    <script src="thedatepicker-master/dist/the-datepicker.js"></script>
+    <!-- JS -->
     <script src="../js/addTask.js">
     </script>
 
 </head>
-<body onload="includeHTML()">
+<body onload="pickDate()">
 <div w3-include-html="header.html"></div> <!-- funktioniert noch nicht -->
 
 <div class="main">
@@ -26,50 +34,72 @@
         <div class="lower-container-left">
             <div class="title">
                 <div class="lower-container-heading"> 
-                    Title
+                    <b> TITLE </b>
                 </div>
-                <input placeholder="Add Title here" class="title-input" id="title-input"> </input>
+                <input placeholder="Add Title" class="title-input field" id="title-input"> </input>
             </div>
             <div class="category">
                 <div class="lower-container-heading">
-                    Category
+                    <b> CATEGORY </b>
                 </div>
-                <div id="category-dropdown">
-                    Dropdown-Placeholder
+
+                <div class="input-and-icon">
+                    <div>
+                        <select placeholder="Management" id="category-dropdown" class="field">
+                                <option> Management </option>
+                                <option> Marketing </option>
+                                <option> Development </option>
+                                <option> Design </option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn-dropdown"> <img src="../Kanban Gruppenarbeit/chevron .png"> </button>
+                    </div>
                 </div>
+
             </div>
             <div class="description">
-                <div class="lower-container-heading">
-                    Category
+                <div class="lower-container-heading field">
+                    <b> DESCRIPTION </b>
                 </div>
-                <input placeholder="Add Description here" class="description-input" id="description-input"> </input>
+                <input placeholder="Add Description" class="description-input field" id="description-input"> </input>
             </div>
         </div>
         <div class="lower-container-right">
             <div class="due-date">
                 <div class="lower-container-heading"> 
-                    Due Date
+                    <b> DUE DATE </b>
                 </div>
-                    <div class="due-date-two-containers">
-                        <div id="due-date-input">
-                            Due Date Placeholder
+                    <div class="input-and-icon">
+                        <div class="field">
+                            <input type="text" id="due-date-input" placeholder="Choose Date" class="field">
                         </div>
                         <div>
-                            Calender Icon Placeholder
+                            <button class="btn-dropdown"> <img src="../Kanban Gruppenarbeit/icons8-calendar-150.png"> </button>
                         </div>
                     </div>
             </div>
             <div class="urgency">
                 <div class="lower-container-heading"> 
-                    Urgency
+                    <b> URGENCY </b>
                 </div>
-                <div id="urgency-dropdown">
-                    Urgency Dropdown Placeholder
-                </div>
+                    <div class="input-and-icon">
+                        <div>
+                            <select placeholder="Very High" id="urgency-dropdown" class="field">
+                                <option> Very High </option>
+                                <option> High </option>
+                                <option> Middle </option>
+                                <option> Low </option>
+                        </select>
+                        </div>
+                        <div>
+                            <button class="btn-dropdown"> <img src="../Kanban Gruppenarbeit/chevron .png"> </button>
+                        </div>
+                    </div>
             </div>
             <div class="assigned-to">
                 <div class="lower-container-heading"> 
-                    Assigned to
+                    <b> ASSIGNED TO </b>
                 </div>
                 <div class="assigned-to-pics">
                     <div id="assigned-to"> 
@@ -77,8 +107,8 @@
                     </div>
                 </div>
                 <div class="cancel-and-create-buttons">
-                    <button id="btn-cancel"> Cancel </button>
-                    <button id="btn-create-task"> Create Task </button>
+                    <button id="btn-cancel" class="btn-cancel"> <b> CANCEL </b></button>
+                    <button onclick="addTask()"id="btn-create-task" class="btn-create-task"> <b> CREATE TASK </b> </button>
                 </div>
 
 
@@ -86,8 +116,10 @@
         </div>
 
     </div>
+    
+    
 
-
+    
 </div>
 
 </body>
