@@ -34,7 +34,7 @@ function includeHTML() {
     let description = document.getElementById('description-input').value;
     let duedate = document.getElementById('due-date-input').value;
     let urgency = document.getElementById('urgency-dropdown').value;
-    let assignedto = document.getElementById('assigned-to').value;
+    let assignedto = document.getElementById('assigned-to').value; /* funktioniert noch nicht */
 
 
 
@@ -43,7 +43,7 @@ function includeHTML() {
     console.log('The Description is ', description);
     console.log('The Due Date is ', duedate);
     console.log('The Urgency is ', urgency);
-    console.log('The Assigned to is ', assignedto);
+    console.log('The Assigned to is ', assignedto); /* funktioniert noch nicht */
 
     let task = {
       'title': title,
@@ -51,7 +51,7 @@ function includeHTML() {
       'description': description,
       'duedate': duedate,
       'urgency': urgency,
-      'assigned to': assignedto,
+      'assigned to': assignedto, /* funktioniert noch nicht */
       'createdat': new Date().getTime()
     };
 
@@ -72,4 +72,14 @@ function includeHTML() {
     datepicker.render();
   }
 
+  function showAssignedToPics(){
+    document.getElementById('assigned-to-pics').classList.remove('d-none');
+    document.getElementById('assigned-to-pics').classList.add('d-show');
+  }
+
+
+  function cancel(){
+    document.getElementById('assigned-to-pics').classList.add('d-none');
+    document.getElementById('assigned-to-pics').classList.remove('d-show');
+  }
 

@@ -1,6 +1,16 @@
 body{
     font-family: 'PT Sans', sans-serif;
 }
+.top-container-addtask{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 24px;
+}
+.top-container-text{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    color: rgb(1, 1, 133);
+    margin-bottom: 30px;
+}
 .lower-container{
     height: 600px;
     width: 1000px;
@@ -21,8 +31,9 @@ body{
     flex-direction: row;
 }
 .lower-container-heading{
-    color: blue;
+    color: rgb(1, 1, 133);
     font-size: 22px;
+    margin-bottom: 25px;
 }
 .lower-container-right{
     height: 600px;
@@ -34,6 +45,8 @@ body{
 .field{
     height: 50px;
     width: 300px;
+    border-radius: 5px;
+    border: solid 1px rgb(160, 156, 156);
     
 }
 .description-input{
@@ -55,7 +68,7 @@ body{
 }
 
 .btn-create-task{
-    background-color: blue;
+    background-color: rgb(1, 1, 133);
     color: white;
     height: 50px;
     width: 130px;
@@ -71,3 +84,54 @@ body{
     border: solid 1px lightgrey;
     border-radius: 15px;
 }
+
+.btn-cancel:hover{
+    cursor: pointer;
+}
+.btn-create-task:hover{
+    cursor: pointer;
+}
+.btn-assigned-to{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.btn-assigned-to:hover{
+    cursor: pointer;  
+   
+}
+.assined-to-pics{
+    height: 50px;;
+    border-radius: 50%;    
+}
+
+.assined-to-pics-container{
+    width: 100px;
+    border-radius: 50%;    
+}
+
+
+.d-none{
+    display: none;
+}
+.d-show{
+    margin-top: 20px;
+}
+.assigned-to{
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 
+.all-assigned-to-pics{
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+}
+
+*/
+

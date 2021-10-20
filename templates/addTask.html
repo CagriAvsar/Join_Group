@@ -23,10 +23,10 @@
 <div class="main">
     <div class="top-container">
         <div class="top-container-addtask"> 
-            Add Task
+            <b> Add Task </b>
         </div>
         <div class="top-container-text"> 
-            Learning Management System Project
+            <b> Learning Management System Project </b>
         </div>
     </div>
 
@@ -59,10 +59,10 @@
 
             </div>
             <div class="description">
-                <div class="lower-container-heading field">
+                <div class="lower-container-heading">
                     <b> DESCRIPTION </b>
                 </div>
-                <input placeholder="Add Description" class="description-input field" id="description-input"> </input>
+                <textarea placeholder="Add Description" class="description-input field" id="description-input"> </textarea>
             </div>
         </div>
         <div class="lower-container-right">
@@ -98,16 +98,19 @@
                     </div>
             </div>
             <div class="assigned-to">
-                <div class="lower-container-heading"> 
+                <div class="lower-container-heading assigned-to-heading"> 
                     <b> ASSIGNED TO </b>
                 </div>
-                <div class="assigned-to-pics">
-                    <div id="assigned-to"> 
-                        Placeholder pictures
+                <div class="assigned-to-pics-container" id="assigned-to">
+                        <button onclick="showAssignedToPics()"> <img src="../imgs/icon plus.png" class="btn-assigned-to"> </button>
+                        <div class="d-none" id="assigned-to-pics">
+                            <img src="../imgs/user1.JPG" class="assined-to-pics"> 
+                            <img src="../imgs/user2.JPG" class="assined-to-pics"> 
+                            <img src="../imgs/user3.JPG" class="assined-to-pics">
                     </div>
                 </div>
                 <div class="cancel-and-create-buttons">
-                    <button id="btn-cancel" class="btn-cancel"> <b> CANCEL </b></button>
+                    <button onclick="cancel()" id="btn-cancel" class="btn-cancel"> <b> CANCEL </b></button>
                     <button onclick="addTask()"id="btn-create-task" class="btn-create-task"> <b> CREATE TASK </b> </button>
                 </div>
 
