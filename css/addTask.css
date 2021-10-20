@@ -13,11 +13,14 @@ body{
 }
 .lower-container{
     height: 600px;
-    width: 1000px;
+    width: 700px;
     background-color: lightgrey;
     display: flex;
     flex-direction: row;
     padding: 50px;
+    border: solid 0px lightgrey;
+    border-radius: 15px;
+
 }
 .lower-container-left{
     height: 600px;
