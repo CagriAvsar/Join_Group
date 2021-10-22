@@ -28,13 +28,17 @@ function includeHTML() {
 
   let allTasks = [];
 
+
+ 
+
+
   function addTask(){
     let title = document.getElementById('title-input').value; 
     let category = document.getElementById('category-dropdown').value;
     let description = document.getElementById('description-input').value;
     let duedate = document.getElementById('due-date-input').value;
     let urgency = document.getElementById('urgency-dropdown').value;
-    let assignedto = document.getElementById('assigned-to').value; /* funktioniert noch nicht */
+    let assignedto = document.getElementById('assigned-to-pics').img; /* funktioniert noch nicht */
 
 
 
@@ -52,7 +56,7 @@ function includeHTML() {
       'duedate': duedate,
       'urgency': urgency,
       'assigned to': assignedto, /* funktioniert noch nicht */
-      'createdat': new Date().getTime()
+      'createdate': new Date().getTime()
     };
 
       
