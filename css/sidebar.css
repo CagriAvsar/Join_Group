@@ -1,0 +1,40 @@
+aside {
+    position: fixed;
+    top: 30px;
+    bottom: 30px;
+    left: 0;
+    background-color: #551392;
+    font-size: 20px;
+    color: white;
+    padding: 35px;
+}
+
+aside ul {
+    list-style: none;
+    /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+aside a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+li:hover {
+    border-left: solid 3px white;
+}
+
+.join-logo {
+    padding-top: 16px;
+    margin-bottom: 70px;
+}
+
+.side-avatar {
+    margin-top: 165px;
+}

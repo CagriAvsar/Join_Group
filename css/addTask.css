@@ -1,17 +1,20 @@
-body{
+body {
     font-family: 'PT Sans', sans-serif;
 }
-.top-container-addtask{
+
+.top-container-addtask {
     font-family: 'PT Sans', sans-serif;
     font-size: 24px;
 }
-.top-container-text{
+
+.top-container-text {
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
     color: rgb(1, 1, 133);
     margin-bottom: 30px;
 }
-.lower-container{
+
+.lower-container {
     height: 600px;
     width: 700px;
     background-color: lightgrey;
@@ -20,60 +23,61 @@ body{
     padding: 50px;
     border: solid 0px lightgrey;
     border-radius: 15px;
-
 }
-.lower-container-left{
+
+.lower-container-left {
     height: 600px;
     width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.due-date-two-containers{
+
+.due-date-two-containers {
     display: flex;
     flex-direction: row;
 }
-.lower-container-heading{
+
+.lower-container-heading {
     color: rgb(1, 1, 133);
     font-size: 22px;
     margin-bottom: 25px;
 }
-.lower-container-right{
+
+.lower-container-right {
     height: 600px;
     width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.field{
+
+.field {
     height: 50px;
     width: 300px;
     border-radius: 5px;
     border: solid 1px rgb(160, 156, 156);
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
-    
-}
-.field:hover{
-    cursor:pointer;
-
-    
-    
 }
 
+.field:hover {
+    cursor: pointer;
+}
 
-.description-input{
+.description-input {
     height: 200px;
     width: 300px;
     resize: none;
 }
 
-.input-and-icon{
+.input-and-icon {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.btn-dropdown{
+
+.btn-dropdown {
     border: none;
     background: white;
     height: 45px;
@@ -82,7 +86,7 @@ body{
     pointer-events: none;
 }
 
-.btn-create-task{
+.btn-create-task {
     background-color: rgb(1, 1, 133);
     color: white;
     height: 50px;
@@ -91,7 +95,7 @@ body{
     border-radius: 15px;
 }
 
-.btn-cancel{
+.btn-cancel {
     background-color: lightgrey;
     color: black;
     height: 50px;
@@ -100,46 +104,51 @@ body{
     border-radius: 15px;
 }
 
-.btn-cancel:hover{
+.btn-cancel:hover {
     cursor: pointer;
 }
-.btn-create-task:hover{
+
+.btn-create-task:hover {
     cursor: pointer;
 }
-.btn-assigned-to{
+
+.btn-assigned-to {
     border: black;
     margin-top: -10px;
     height: 70px;
     width: 70px;
 }
 
-.btn-assigned-to:hover{
-    cursor: pointer;  
-   
-}
-.assined-to-pics{
-    height: 50px;;
-    border-radius: 50%;    
+.btn-assigned-to:hover {
+    cursor: pointer;
 }
 
-.assined-to-pics-container{
+.assined-to-pics {
+    height: 50px;
+    ;
+    border-radius: 50%;
+}
+
+.assined-to-pics-container {
     width: 100px;
-    border-radius: 50%;    
+    border-radius: 50%;
 }
 
-
-.d-none{
+.d-none {
     opacity: 0.0;
 }
-.d-show{
+
+.d-show {
     margin-top: 20px;
 }
-.assigned-to{
+
+.assigned-to {
     height: 260px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 
 /* 
 .all-assigned-to-pics{
@@ -150,4 +159,3 @@ body{
 }
 
 */
-

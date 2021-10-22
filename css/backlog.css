@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+    margin-block-end: 1px;
+    color: black;
+}
+
+.overlay-container {
+    padding-right: 50px;
+    padding-left: calc(35px - -145px);
+    padding-top: 70px;
+    height: 100vh;
+}
+
+.backlog-header {
+    margin-bottom: 50px;
+    color: blueviolet;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2424be;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.task-info-container {
+    height: 250px;
+    width: 100%;
+    margin-top: 10px;
+}

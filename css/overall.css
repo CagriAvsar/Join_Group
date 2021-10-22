@@ -1,0 +1,11 @@
+footer {
+    position: absolute;
+    bottom: -67px;
+    left: 6px;
+    color: darkblue;
+}
+
+footer a {
+    text-decoration: none;
+    margin-left: 12px;
+}
