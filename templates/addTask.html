@@ -19,13 +19,17 @@
     <script src="../js/addTask.js"> </script>
     <!-- JS sidebar-->
     <script src="../js/includeHTML.js"> </script>
+    <!-- included backend -->
+    <script src="../js/mini-backend.js"> </script>
+    <!-- includes backlog -->
+    <script src="../js/backlog.js"></script>
 
 
 
    
 
 </head>
-<body onload="includeHTML(), pickDate()">
+<body onload="init(), includeHTML(), pickDate()">
 
 <div class="overall">
     <div w3-include-html="sidebar.html"></div>
@@ -114,9 +118,9 @@
                     <div class="assigned-to-pics-container" id="assigned-to">
                             <img src="../imgs/icon plus.png" class="btn-assigned-to" onclick="showAssignedToPics()">
                             <div class="d-none" id="assigned-to-pics">
-                                <img src="../imgs/user1.JPG" class="assined-to-pics"> 
-                                <img src="../imgs/user2.JPG" class="assined-to-pics"> 
-                                <img src="../imgs/user3.JPG" class="assined-to-pics">
+                                <img src="../imgs/user1.JPG" class="assined-to-pics" onclick="addSelectedUser(0)"> 
+                                <img src="../imgs/user2.JPG" class="assined-to-pics" onclick="addSelectedUser(1)"> 
+                                <img src="../imgs/user3.JPG" class="assined-to-pics" onclick="addSelectedUser(2)">
                         </div>
                     </div>
                     <div class="cancel-and-create-buttons">
@@ -136,5 +140,8 @@
     </div>
 </div>
 
+<div id="backlog-test"> 
+
+</div> 
 </body>
 </html>

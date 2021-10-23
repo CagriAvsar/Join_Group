@@ -36,6 +36,8 @@
 
       let AllTasksAsString = JSON.stringify(allTasks);
       localStorage.setItem('allTasks', AllTasksAsString);
+
+      renderBackLogsTest()
     
   }
 
@@ -56,3 +58,17 @@
     document.getElementById('assigned-to-pics').classList.remove('d-show');
   }
 
+
+  function renderBackLogsTest() {
+    let backlogsContainerTest = document.getElementById('backlog-test');
+
+    backlogsContainerTest.innerHTML = ``;
+    for (let i = 0; i < AllTasksAsString.length; i++) {
+        let task = AllTasksAsString[i];
+        backlogsContainer.innerHTML = `
+        <div class="task-info-containerTest">
+
+        </div>
+        `;
+    }
+}

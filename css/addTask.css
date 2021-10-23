@@ -133,6 +133,10 @@ body {
     border-radius: 50%;
 }
 
+.assined-to-pics:hover {
+    cursor: pointer;
+}
+
 .assined-to-pics-container {
     width: 100px;
     border-radius: 50%;
