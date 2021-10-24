@@ -3,7 +3,7 @@ let users = [];
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
-    setURL('http://developerakademie.com/smallest_backend_ever');
+    setURL('http://gruppe-114.developerakademie.net/Kanban%20Gruppenarbeit/addTask.html');
 }
 
 

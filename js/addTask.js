@@ -30,14 +30,14 @@
 
       
 
-      allTasks.push(task);
+      allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */
 
       console.log(allTasks);
 
       let AllTasksAsString = JSON.stringify(allTasks);
       localStorage.setItem('allTasks', AllTasksAsString);
 
-      renderBackLogsTest()
+      renderBackLogsTest();
     
   }
 
@@ -60,14 +60,14 @@
 
 
   function renderBackLogsTest() {
-    let backlogsContainerTest = document.getElementById('backlog-test');
+    let backlogsContainerTest = document.getElementById('js-test');
 
     backlogsContainerTest.innerHTML = ``;
-    for (let i = 0; i < AllTasksAsString.length; i++) {
-        let task = AllTasksAsString[i];
-        backlogsContainer.innerHTML = `
+    for (let i = 0; i < allTasks.length; i++) {
+        let task = allTasks[i];
+        backlogsContainerTest.innerHTML += `
         <div class="task-info-containerTest">
-
+          ${task['title']}
         </div>
         `;
     }
