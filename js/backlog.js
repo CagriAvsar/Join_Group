@@ -1,5 +1,3 @@
-let users = [];
-
 async function init() {
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
@@ -39,11 +37,11 @@ function renderBackLogs() {
     let backlogsContainer = document.getElementById('backlogsContainer');
 
     backlogsContainer.innerHTML = ``;
-    for (let i = 0; i < users.length; i++) {
-        let user = users[i];
+    for (let i = 0; i < allTasks.length; i++) {
+        let tasks = allTasks[i];
         backlogsContainer.innerHTML = `
         <div class="task-info-container">
-
+            ${tasks.title}
         </div>
         `;
     }

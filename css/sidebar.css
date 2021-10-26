@@ -1,12 +1,15 @@
 aside {
     position: fixed;
-    top: 30px;
-    bottom: 30px;
+    top: 15px;
+    bottom: 15px;
     left: 0;
     background-color: #551392;
     font-size: 20px;
     color: white;
-    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 aside ul {
@@ -24,10 +27,12 @@ aside a {
 li {
     margin-bottom: 24px;
     cursor: pointer;
+    padding: 0px 27px;
+    border-left: solid 4px transparent;
 }
 
 li:hover {
-    border-left: solid 3px white;
+    border-left: solid 4px white;
 }
 
 .join-logo {

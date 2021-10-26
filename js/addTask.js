@@ -1,7 +1,11 @@
-  let allTasks = [];
+let allTasks = [];
 
-  function addTask(){
-    let title = document.getElementById('title-input').value; 
+
+
+
+
+function addTask() {
+    let title = document.getElementById('title-input').value;
     let category = document.getElementById('category-dropdown').value;
     let description = document.getElementById('description-input').value;
     let duedate = document.getElementById('due-date-input').value;
@@ -17,58 +21,41 @@
     console.log('The Urgency is ', urgency);
     console.log('The Assigned to is ', assignedto); /* funktioniert noch nicht */
 
-
     let task = {
-      'title': title,
-      'category': category,
-      'description': description,
-      'duedate': duedate,
-      'urgency': urgency,
-      'assigned to': assignedto, /* funktioniert noch nicht */
-      'createdate': new Date().getTime()
+        'title': title,
+        'category': category,
+        'description': description,
+        'duedate': duedate,
+        'urgency': urgency,
+        'assigned to': assignedto,
+        /* funktioniert noch nicht */
+        'createdate': new Date().getTime()
     };
 
-      
 
-      allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */
 
-      console.log(allTasks);
+    allTasks.push(task);
 
-      let AllTasksAsString = JSON.stringify(allTasks);
-      localStorage.setItem('allTasks', AllTasksAsString);
+    console.log(allTasks);
 
-      renderBackLogsTest();
-    
-  }
+    let AllTasksAsString = JSON.stringify(allTasks);
+    localStorage.setItem('allTasks', AllTasksAsString);
 
-  function pickDate(){
+}
+
+function pickDate() {
     const input = document.getElementById('due-date-input');
     const datepicker = new TheDatepicker.Datepicker(input);
     datepicker.render();
-  }
+}
 
-  function showAssignedToPics(){
+function showAssignedToPics() {
     document.getElementById('assigned-to-pics').classList.remove('d-none');
     document.getElementById('assigned-to-pics').classList.add('d-show');
-  }
+}
 
 
-  function cancel(){
+function cancel() {
     document.getElementById('assigned-to-pics').classList.add('d-none');
     document.getElementById('assigned-to-pics').classList.remove('d-show');
-  }
-
-
-  function renderBackLogsTest() {
-    let backlogsContainerTest = document.getElementById('js-test');
-
-    backlogsContainerTest.innerHTML = ``;
-    for (let i = 0; i < allTasks.length; i++) {
-        let task = allTasks[i];
-        backlogsContainerTest.innerHTML += `
-        <div class="task-info-containerTest">
-          ${task['title']}
-        </div>
-        `;
-    }
 }
