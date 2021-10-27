@@ -1,5 +1,10 @@
 let allTasks = [];
 
+async function init() {
+    setURL('http://gruppe-114.developerakademie.net/Kanban%20Gruppenarbeit/js/mini_backend.js');
+    await downloadFromServer();
+    users = JSON.parse(backend.getItem('users')) || [];
+}
 
 
 
