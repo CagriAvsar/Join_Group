@@ -1,5 +1,7 @@
+/* BACKEND INTEGRATION */
+
 async function init() {
-    setURL('http://gruppe-114.developerakademie.net/Kanban%20Gruppenarbeit/js/mini_backend.js');
+    setURL('http://gruppe-114.developerakademie.net/smallest_backend_ever');
     await downloadFromServer();
     users = JSON.parse(backend.getItem('users')) || [];
 }

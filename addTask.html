@@ -18,6 +18,7 @@
     <script src="thedatepicker-master/dist/the-datepicker.js"></script>
     <script src="js/addTask.js"></script>
     <script src="js/includeHTML.js"></script>
+    <script src="js/mini_backend.js"></script>
 
 
 
@@ -26,25 +27,25 @@
 
 </head>
 
-<body onload="includeHTML(), pickDate()">
+<body onload="init(), includeHTML(), pickDate()">
 
     <div class="overall">
-        <div w3-include-html="templates/sidebar.html"></div>
-
+        <div w3-include-html="../templates/sidebar.html"></div>
+    
         <div class="main">
             <div class="top-container">
-                <div class="top-container-addtask">
+                <div class="top-container-addtask"> 
                     <b> Add Task </b>
                 </div>
-                <div class="top-container-text">
+                <div class="top-container-text"> 
                     <b> Learning Management System Project </b>
                 </div>
             </div>
-
+    
             <div class="lower-container">
                 <div class="lower-container-left">
                     <div class="title">
-                        <div class="lower-container-heading">
+                        <div class="lower-container-heading"> 
                             <b> TITLE </b>
                         </div>
                         <input placeholder="Add Title" class="title-input field" id="title-input"> </input>
@@ -53,21 +54,21 @@
                         <div class="lower-container-heading">
                             <b> CATEGORY </b>
                         </div>
-
+    
                         <div class="input-and-icon">
                             <div>
                                 <select placeholder="Management" id="category-dropdown" class="field">
-                                    <option> Management </option>
-                                    <option> Marketing </option>
-                                    <option> Development </option>
-                                    <option> Design </option>
-                            </select>
+                                        <option> Management </option>
+                                        <option> Marketing </option>
+                                        <option> Development </option>
+                                        <option> Design </option>
+                                </select>
                             </div>
                             <div>
                                 <button class="btn-dropdown"> <img src="../imgs/chevron .png"> </button>
                             </div>
                         </div>
-
+    
                     </div>
                     <div class="description">
                         <div class="lower-container-heading">
@@ -78,69 +79,67 @@
                 </div>
                 <div class="lower-container-right">
                     <div class="due-date">
-                        <div class="lower-container-heading">
+                        <div class="lower-container-heading"> 
                             <b> DUE DATE </b>
                         </div>
-                        <div class="input-and-icon">
-                            <div class="field">
-                                <input type="text" id="due-date-input" placeholder="Choose Date" class="field">
+                            <div class="input-and-icon">
+                                <div class="field">
+                                    <input type="text" id="due-date-input" placeholder="Choose Date" class="field">
+                                </div>
+                                <div>
+                                    <button class="btn-dropdown"> <img src="../imgs/icons8-calendar-150.png"> </button>
+                                </div>
                             </div>
-                            <div>
-                                <button class="btn-dropdown"> <img src="../imgs/icons8-calendar-150.png"> </button>
-                            </div>
-                        </div>
                     </div>
                     <div class="urgency">
-                        <div class="lower-container-heading">
+                        <div class="lower-container-heading"> 
                             <b> URGENCY </b>
                         </div>
-                        <div class="input-and-icon">
-                            <div>
-                                <select placeholder="Very High" id="urgency-dropdown" class="field">
-                                    <option> Very High </option>
-                                    <option> High </option>
-                                    <option> Middle </option>
-                                    <option> Low </option>
-                            </select>
+                            <div class="input-and-icon">
+                                <div>
+                                    <select placeholder="Very High" id="urgency-dropdown" class="field">
+                                        <option> Very High </option>
+                                        <option> High </option>
+                                        <option> Middle </option>
+                                        <option> Low </option>
+                                </select>
+                                </div>
+                                <div>
+                                    <button class="btn-dropdown"> <img src="../imgs/chevron .png"> </button>
+                                </div>
                             </div>
-                            <div>
-                                <button class="btn-dropdown"> <img src="../imgs/chevron .png"> </button>
-                            </div>
-                        </div>
                     </div>
                     <div class="assigned-to">
-                        <div class="lower-container-heading assigned-to-heading">
+                        <div class="lower-container-heading assigned-to-heading"> 
                             <b> ASSIGNED TO </b>
                         </div>
                         <div class="assigned-to-pics-container" id="assigned-to">
-                            <img src="../imgs/icon plus.png" class="btn-assigned-to" onclick="showAssignedToPics()">
-                            <div class="d-none" id="assigned-to-pics">
-                                <img src="../imgs/user1.JPG" class="assined-to-pics" onclick="addSelectedUser(0)">
-                                <img src="../imgs/user2.JPG" class="assined-to-pics" onclick="addSelectedUser(1)">
-                                <img src="../imgs/user3.JPG" class="assined-to-pics" onclick="addSelectedUser(2)">
+                                <img src="../imgs/icon plus.png" class="btn-assigned-to" onclick="showAssignedToPics()">
+                                <div class="d-none" id="assigned-to-pics">
+                                    <img src="../imgs/user1.JPG" class="assined-to-pics" onclick="AddselectedUser(0)"> 
+                                    <img src="../imgs/user2.JPG" class="assined-to-pics" onclick="AddselectedUser(1)"> 
+                                    <img src="../imgs/user3.JPG" class="assined-to-pics" onclick="AddselectedUser(2)">
                             </div>
                         </div>
                         <div class="cancel-and-create-buttons">
                             <button onclick="cancel()" id="btn-cancel" class="btn-cancel"> <b> CANCEL </b></button>
-                            <button onclick="addTask()" id="btn-create-task" class="btn-create-task"> <b> CREATE TASK </b> </button>
+                            <button onclick="addTask()"id="btn-create-task" class="btn-create-task"> <b> CREATE TASK </b> </button>
                         </div>
-
-
+    
+    
                     </div>
                 </div>
-
+    
             </div>
-
-
-
-
+            
+            
+    
+            
         </div>
-        <footer w3-include-html="templates/footer.html "></footer>
     </div>
-
-    <div id="backlog-test" class="backlog-test">
-        test
-    </div>
-</body>
-
-</html>
+    
+    <div id="backlog-test" class="backlog-test"> 
+    test
+    </div> 
+    </body>
+    </html>
