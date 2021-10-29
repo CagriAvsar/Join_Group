@@ -46,7 +46,7 @@ async function addUser() {
       'description': description,
       'duedate': duedate,
       'urgency': urgency,
-      'assigned to': selectedUser, /* funktioniert noch nicht */
+      /* 'assigned to': selectedUser, /* funktioniert noch nicht */
       'createdate': new Date().getTime()
     };
 
