@@ -2,10 +2,11 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
-.main{
+.main {
     margin-left: 200px;
     margin-top: 50px;
 }
+
 .top-container-addtask {
     font-family: 'PT Sans', sans-serif;
     font-size: 24px;
@@ -21,7 +22,7 @@ body {
 .lower-container {
     height: 600px;
     width: 700px;
-    background-color: lightgrey;
+    background-color: #f3f3f366;
     display: flex;
     flex-direction: row;
     padding: 50px;
@@ -97,23 +98,25 @@ body {
     width: 130px;
     border: solid 1px lightgrey;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .btn-cancel {
-    background-color: lightgrey;
+    background-color: rgb(192, 192, 192);
     color: black;
     height: 50px;
     width: 130px;
     border: solid 1px lightgrey;
     border-radius: 15px;
-}
-
-.btn-cancel:hover {
     cursor: pointer;
 }
 
 .btn-create-task:hover {
-    cursor: pointer;
+    background-color: rgb(36, 36, 153);
+}
+
+.btn-cancel:hover {
+    background-color: rgb(212, 212, 212);
 }
 
 .btn-assigned-to {
@@ -157,9 +160,10 @@ body {
     justify-content: space-between;
 }
 
-.backlog-test{
+.backlog-test {
     margin-left: 500px;
 }
+
 
 /* 
 .all-assigned-to-pics{
