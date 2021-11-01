@@ -1,28 +1,49 @@
-/* BACKEND INTEGRATION AND LOAD USERS */
+/* USERS */
 
-let users = [];
+let users = [{
+  'name': 'Marian',
+  'e-mail': 'marianwill@gmail.com',
+  'img': 'imgs/user1.JPG'
+},
+{
+  'name': 'Cagri',
+  'e-mail': 'cagriavsa@gmail.com',
+  'img': 'imgs/user2.JPG'
+},
+{
+  'name': 'Typ',
+  'e-mail': 'dertyp@gmail.com',
+  'img': 'imgs/user3.JPG'
+}
+];
+
+let selectedUser = [];
+
 let allTasks = [];
 
+
+/* BACKEND INTEGRATION AND LOAD USERS */
 
 async function init(){
     setURL('http://gruppe-114.developerakademie.net/smallest_backend_ever');
     await downloadFromServer();
-    users = JSON.parse(backend.getItem('users')) || [];
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
 
     includeHTML();
     pickDate();
+    
 }
 
-/* USERS */
 
 
 
-async function addUser() {
-  users.push('Marian', 'Cagri', 'Typ');
-  await backend.setItem('users', JSON.stringify(users));
-}
-      
+
+
+  function addUser(index){
+    selectedUser.push(users[index]);
+  }
+
+
 /* TASKS  */
   
   
@@ -39,6 +60,7 @@ async function addUser() {
     console.log('The Description is ', description);
     console.log('The Due Date is ', duedate);
     console.log('The Urgency is ', urgency);
+    console.log('The Assigned to is ', selectedUser);
 
     let task = {
       'title': title,
@@ -46,7 +68,7 @@ async function addUser() {
       'description': description,
       'duedate': duedate,
       'urgency': urgency,
-      /* 'assigned to': selectedUser, /* funktioniert noch nicht */
+      'assigned to': selectedUser,
       'createdate': new Date().getTime()
     };
 
@@ -58,6 +80,8 @@ async function addUser() {
 
       let AllTasksAsString = JSON.stringify(allTasks);
       backend.setItem('allTasks', AllTasksAsString);
+
+      /* let selectedUser = []; */
 
       /* renderBackLogsTest(); */
     
