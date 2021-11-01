@@ -77,9 +77,9 @@ async function addTask() {
     console.log(allTasks);
 
     let AllTasksAsString = JSON.stringify(allTasks);
-    await backend.setItem('allTasks', AllTasksAsString);
+    backend.setItem('allTasks', AllTasksAsString);
 
-      /* let selectedUser = []; */
+    selectedUser = []; /* setze User zurück */
 
       /* renderBackLogsTest(); */
     
