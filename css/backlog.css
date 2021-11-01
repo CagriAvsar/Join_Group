@@ -32,8 +32,10 @@ nav a {
     font-size: 17px;
 }
 
+#backlogContainer {
+    margin-top: 30px;
+}
+
 .task-info-container {
-    height: 250px;
-    width: 100%;
-    margin-top: 10px;
+    background-color: aliceblue;
 }

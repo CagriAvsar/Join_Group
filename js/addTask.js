@@ -45,11 +45,11 @@ async function init(){
 
 
 /* TASKS  */
-  
-  
 
- function addTask(){
-    let title = document.getElementById('title-input').value; 
+
+
+async function addTask() {
+    let title = document.getElementById('title-input').value;
     let category = document.getElementById('category-dropdown').value;
     let description = document.getElementById('description-input').value;
     let duedate = document.getElementById('due-date-input').value;
@@ -72,14 +72,12 @@ async function init(){
       'createdate': new Date().getTime()
     };
 
-      
+    allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */
 
-      allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */
+    console.log(allTasks);
 
-      console.log(allTasks);
-
-      let AllTasksAsString = JSON.stringify(allTasks);
-      backend.setItem('allTasks', AllTasksAsString);
+    let AllTasksAsString = JSON.stringify(allTasks);
+    await backend.setItem('allTasks', AllTasksAsString);
 
       /* let selectedUser = []; */
 
@@ -87,44 +85,44 @@ async function init(){
     
   }
 
-  /* DATEPICKER */
+/* DATEPICKER */
 
-  function pickDate(){
+function pickDate() {
     const input = document.getElementById('due-date-input');
     const datepicker = new TheDatepicker.Datepicker(input);
     datepicker.render();
-  }
+}
 
-  /* SHOW PICS */ 
+/* SHOW PICS */
 
-  function showAssignedToPics(){
+function showAssignedToPics() {
     document.getElementById('assigned-to-pics').classList.remove('d-none');
     document.getElementById('assigned-to-pics').classList.add('d-show');
-  }
+}
 
 
-  function cancel(){
+function cancel() {
     document.getElementById('assigned-to-pics').classList.add('d-none');
     document.getElementById('assigned-to-pics').classList.remove('d-show');
-  }
-  
-  /* PUT ARRAY IN CONTAINER */
-  /*
-    function renderBackLogsTest() {
-      let backlogsContainerTest = document.getElementById('backlog-test');
-  
-      backlogsContainerTest.innerHTML = ``;
-      for (let i = 0; i < allTasks.length; i++) {
-          let task = allTasks[i];
-          backlogsContainerTest.innerHTML += `
-          <div class="backlog-test">
-            ${task['title']}
-            ${selectedUser[i]['name']}
-            ${selectedUser[i]['E-Mail']}
-             <img src="${selectedUser[i]['img']}">
-          </div>
-          `;
-      }
-  }
+}
 
-  */
+/* PUT ARRAY IN CONTAINER */
+/*
+  function renderBackLogsTest() {
+    let backlogsContainerTest = document.getElementById('backlog-test');
+  
+    backlogsContainerTest.innerHTML = ``;
+    for (let i = 0; i < allTasks.length; i++) {
+        let task = allTasks[i];
+        backlogsContainerTest.innerHTML += `
+        <div class="backlog-test">
+          ${task['title']}
+          ${selectedUser[i]['name']}
+          ${selectedUser[i]['E-Mail']}
+           <img src="${selectedUser[i]['img']}">
+        </div>
+        `;
+    }
+}
+
+*/

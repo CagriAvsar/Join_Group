@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Board </title>
-    <link rel="stylesheet" href="../css/board.css">
-    <script src="../js/board.js">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- included JavaScript -->
+    <script src="js/mini_backend.js"></script>
+    <script src="js/backlog.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <!-- linked styles -->
+    <link rel="stylesheet" href="css/backlog.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/overall.css">
+    <link rel="stylesheet" href="css/help.css">
+    <title>Backlog</title>
     </script>
 
 </head>
-<body onload="includeHTML()">
-<div w3-include-html="header.html"></div>  <!-- funktioniert noch nicht -->
-<div class="board-section">
-    <div class="double-column">
-        <div class="board-column">
-            <span class="head-off"><b>TO DO</b></span>
-            <div class="column-scroll">
-                <div class="todo" id="to_do" ondrop="moveTo('to_do')" ondragover="allowDrop(event)">
-                </div>
-            </div>
-        </div>
-        <div class="board-column">
-            <span class="head-off"><b>IN PROGRESS</b></span>
-            <div class="column-scroll">
-                <div id="in_progress" ondrop="moveTo('in_progress')" ondragover="allowDrop(event)"
-                    class="todo">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="double-column">
-        <div class="board-column">
-            <span class="head-off"><b>TESTING</b></span>
-            <div class="column-scroll">
-                <div id="testing" ondrop="moveTo('testing')" ondragover="allowDrop(event)" class="todo">
-                </div>
-            </div>
-        </div>
-        <div class="board-column">
-            <span class="head-off"><b>DONE</b></span>
-            <div class="column-scroll">
-                <div id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)" class="todo"></div>
-            </div>
-        </div>
-    </div>
-</div>
 
+<body onload="includeHTML()">
+    <div w3-include-html="templates/sidebar.html "></div>
+    <!-- funktioniert noch nicht -->
+    <div class="overlay">
+
+        <div class="parent-column-container">
+            <h1>To-Do</h1>
+            <div class="column"></div>
+        </div>
+
+        <div class="parent-column-container">
+            <h1>In Progress</h1>
+            <div class="column"></div>
+        </div>
+
+
+        <div class="parent-column-container">
+            <h1>Testing</h1>
+            <div class="column"></div>
+        </div>
+
+        <div class="parent-column-container">
+            <h1>Done</h1>
+            <div class="column"></div>
+        </div>
+
+    </div>
+    <!-- includes footer -->
+    <footer w3-include-html="templates/footer.html "></footer>
 </body>
+
 </html>
