@@ -1,6 +1,17 @@
+.body-index {
+    margin: 0;
+    background-color: #551392;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.padding-8 {
+    padding: 8px;
+}
+
 footer {
     position: absolute;
-    bottom: -72px;
+    bottom: 0px;
     left: 6px;
     color: darkblue;
 }
@@ -8,4 +19,41 @@ footer {
 footer a {
     text-decoration: none;
     margin-left: 12px;
+}
+
+.login-container {
+    height: 100vh;
+    background-color: #551392;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-btn {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    color: #551392;
+}
+
+.login-btn:hover {
+    background-color: rgb(240, 240, 240);
+    color: #602b91;
+}
+
+.input-field {
+    border: none;
+    border-radius: 6px;
+}
+
+.input-field:focus {
+    outline-width: 0;
+    padding: 10px;
 }

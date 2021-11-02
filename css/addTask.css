@@ -10,12 +10,13 @@ body {
 .top-container-addtask {
     font-family: 'PT Sans', sans-serif;
     font-size: 24px;
+    color: darkblue;
 }
 
 .top-container-text {
     font-family: 'PT Sans', sans-serif;
     font-size: 16px;
-    color: rgb(1, 1, 133);
+    color: #6b1fb2;
     margin-bottom: 30px;
 }
 
@@ -102,11 +103,11 @@ body {
 }
 
 .btn-cancel {
-    background-color: rgb(192, 192, 192);
-    color: black;
+    background-color: transparent;
+    color: #2424be;
     height: 50px;
     width: 130px;
-    border: solid 1px lightgrey;
+    border: none;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -115,15 +116,20 @@ body {
     background-color: rgb(36, 36, 153);
 }
 
-.btn-cancel:hover {
-    background-color: rgb(212, 212, 212);
-}
+
+/* .btn-cancel:hover {
+    background-color: #ffffff;
+} */
 
 .btn-assigned-to {
     border: black;
     margin-top: -10px;
     height: 70px;
     width: 70px;
+}
+
+.cancel-and-create-buttons {
+    margin-left: 60px;
 }
 
 .btn-assigned-to:hover {

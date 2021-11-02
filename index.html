@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- linked styles -->
+    <link rel="stylesheet" href="css/addTask.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/overall.css">
+    <link href="thedatepicker-master/dist/the-datepicker.css" rel="stylesheet">
+    <!-- included JavaScript -->
+    <script src="thedatepicker-master/dist/the-datepicker.js"></script>
+    <script src="js/addTask.js"></script>
+    <script src="js/includeHTML.js"></script>
+    <script src="js/mini_backend.js"></script>
+</head>
+
+<body onload="init()" class="body-index">
+
+    <div class="login-header">
+        <a href="#">Registrieren</a>
+    </div>
+
+    <div class="login-container">
+        <h1>Sie können sich hier einloggen</h1>
+
+        <form action="/action_page.php" class="form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="padding-8 input-field"><br><br>
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" minlength="5" class="padding-8 input-field"><br><br>
+            <button class="login-btn padding-8">Einloggen</button>
+        </form>
+
+        <hr class="line">
+    </div>
+
+</body>
+
+</html>

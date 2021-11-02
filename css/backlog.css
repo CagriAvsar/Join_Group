@@ -17,7 +17,7 @@ h1 {
 
 .backlog-header {
     margin-bottom: 50px;
-    color: blueviolet;
+    color: #6b1fb2;
 }
 
 nav {
@@ -38,4 +38,9 @@ nav a {
 
 .task-info-container {
     background-color: aliceblue;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px;
 }

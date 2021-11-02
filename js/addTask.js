@@ -1,20 +1,20 @@
 /* USERS */
 
 let users = [{
-  'name': 'Marian',
-  'e-mail': 'marianwill@gmail.com',
-  'img': 'imgs/user1.JPG'
-},
-{
-  'name': 'Cagri',
-  'e-mail': 'cagriavsa@gmail.com',
-  'img': 'imgs/user2.JPG'
-},
-{
-  'name': 'Typ',
-  'e-mail': 'dertyp@gmail.com',
-  'img': 'imgs/user3.JPG'
-}
+        'name': 'Marian',
+        'e-mail': 'marianwill@gmail.com',
+        'img': 'imgs/user1.JPG'
+    },
+    {
+        'name': 'Cagri',
+        'e-mail': 'cagriavsa@gmail.com',
+        'img': 'imgs/user2.JPG'
+    },
+    {
+        'name': 'Typ',
+        'e-mail': 'dertyp@gmail.com',
+        'img': 'imgs/user3.JPG'
+    }
 ];
 
 let selectedUser = [];
@@ -24,29 +24,20 @@ let allTasks = [];
 
 /* BACKEND INTEGRATION AND LOAD USERS */
 
-async function init(){
+async function init() {
     setURL('http://gruppe-114.developerakademie.net/smallest_backend_ever');
     await downloadFromServer();
-    allTasks = JSON.parse(backend.getItem('allTasks')) || [];
 
     includeHTML();
     pickDate();
-    
 }
 
 
-
-
-
-
-  function addUser(index){
+function addUser(index) {
     selectedUser.push(users[index]);
-  }
-
+}
 
 /* TASKS  */
-
-
 
 async function addTask() {
     let title = document.getElementById('title-input').value;
@@ -63,13 +54,13 @@ async function addTask() {
     console.log('The Assigned to is ', selectedUser);
 
     let task = {
-      'title': title,
-      'category': category,
-      'description': description,
-      'duedate': duedate,
-      'urgency': urgency,
-      'assigned to': selectedUser,
-      'createdate': new Date().getTime()
+        'title': title,
+        'category': category,
+        'description': description,
+        'duedate': duedate,
+        'urgency': urgency,
+        'assigned to': selectedUser,
+        'createdate': new Date().getTime()
     };
 
     allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */
@@ -81,9 +72,9 @@ async function addTask() {
 
     selectedUser = []; /* setze User zurück */
 
-      /* renderBackLogsTest(); */
-    
-  }
+    /* renderBackLogsTest(); */
+
+}
 
 /* DATEPICKER */
 
