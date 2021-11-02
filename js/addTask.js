@@ -45,6 +45,7 @@ async function addTask() {
     let description = document.getElementById('description-input').value;
     let duedate = document.getElementById('due-date-input').value;
     let urgency = document.getElementById('urgency-dropdown').value;
+    let phase = 'open';
 
     console.log('The Title is ', title);
     console.log('The Category is ', category);
@@ -52,6 +53,7 @@ async function addTask() {
     console.log('The Due Date is ', duedate);
     console.log('The Urgency is ', urgency);
     console.log('The Assigned to is ', selectedUser);
+    console.log('The Phase is ', phase);
 
     let task = {
         'title': title,
@@ -60,7 +62,8 @@ async function addTask() {
         'duedate': duedate,
         'urgency': urgency,
         'assigned to': selectedUser,
-        'createdate': new Date().getTime()
+        'createdate': new Date().getTime(),
+        'phase': phase
     };
 
     allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */
