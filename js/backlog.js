@@ -41,6 +41,8 @@ function renderBackLogs() {
           <span>${task.title}</span>
           <span>${task.category}</span>
           <span>${task.description}</span>
+          <span>${task['assigned-to'][0]['e-mail']} 
+          <img src="${task['assigned-to'][0]['img']}">
         </div>
         `;
     }

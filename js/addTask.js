@@ -61,7 +61,7 @@ async function addTask() {
         'description': description,
         'duedate': duedate,
         'urgency': urgency,
-        'assigned to': selectedUser,
+        'assigned-to': selectedUser,
         'createdate': new Date().getTime(),
         'phase': phase
     };
