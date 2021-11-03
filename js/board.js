@@ -18,5 +18,7 @@ function updateHTML() {
 }
 
 function generateToDoHTML(element) {
-  return `<div> ${element['title']} <div>`;
+  return `<div draggable="true" ondragstart="startDragging()"> ${element['title']} <div>`;
 }
+
+/* function startDragging() */

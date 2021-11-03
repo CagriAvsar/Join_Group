@@ -21,6 +21,8 @@ let selectedUser = [];
 
 let allTasks = [];
 
+let id = [];
+
 
 /* BACKEND INTEGRATION AND LOAD USERS */
 
@@ -46,6 +48,7 @@ async function addTask() {
     let duedate = document.getElementById('due-date-input').value;
     let urgency = document.getElementById('urgency-dropdown').value;
     let phase = 'open';
+    let id = +1;
 
     console.log('The Title is ', title);
     console.log('The Category is ', category);
@@ -54,6 +57,7 @@ async function addTask() {
     console.log('The Urgency is ', urgency);
     console.log('The Assigned to is ', selectedUser);
     console.log('The Phase is ', phase);
+    console.log('The ID is ', id);
 
     let task = {
         'title': title,
@@ -63,7 +67,8 @@ async function addTask() {
         'urgency': urgency,
         'assigned-to': selectedUser,
         'createdate': new Date().getTime(),
-        'phase': phase
+        'phase': phase,
+        'id': id
     };
 
     allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */
