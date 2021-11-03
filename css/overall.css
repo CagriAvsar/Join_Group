@@ -3,6 +3,7 @@
     background-color: #551392;
     color: white;
     font-family: 'PT Sans', sans-serif;
+    height: 100vh;
 }
 
 .padding-8 {
@@ -30,6 +31,29 @@ footer a {
     align-items: center;
 }
 
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 35px;
+}
+
+.login-header img {
+    object-fit: cover;
+    width: 50px;
+}
+
+.login-header a {
+    text-decoration: none;
+    color: white;
+    transition: all 225ms ease-in-out;
+    border-bottom: solid 1px transparent;
+}
+
+.login-header a:hover {
+    border-bottom: solid 1px white;
+    padding-top: 4px;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -55,5 +79,10 @@ footer a {
 
 .input-field:focus {
     outline-width: 0;
-    padding: 10px;
+    width: 200px;
+}
+
+.line {
+    width: 350px;
+    margin-top: 80px;
 }

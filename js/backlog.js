@@ -1,5 +1,5 @@
 /* BACKEND INTEGRATION */
-let allTasks = ['hallo'];
+let allTasks = [];
 
 let users = [{
         'name': 'Marian',
