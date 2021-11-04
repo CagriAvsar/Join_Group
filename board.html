@@ -33,23 +33,23 @@
 
         <div class="parent-column-container">
             <h1>To-Do</h1>
-            <div class="column" id="to-do"></div>
+            <div class="column" id="to-do" ondrop="moveTo('to-do')" ondragover="allowDrop(event)"></div>
         </div>
 
-        <div class="parent-column-container">
+        <div class="parent-column-container" >
             <h1>In Progress</h1>
-            <div class="column"></div>
+            <div class="column" id="in-progress" ondrop="moveTo('in-progress')" ondragover="allowDrop(event)"></div>
         </div>
 
 
-        <div class="parent-column-container">
+        <div class="parent-column-container" >
             <h1>Testing</h1>
-            <div class="column"></div>
+            <div class="column" id="testing" ondrop="moveTo('testing')" ondragover="allowDrop(event)"></div>
         </div>
 
-        <div class="parent-column-container">
+        <div class="parent-column-container" >
             <h1>Done</h1>
-            <div class="column"></div>
+            <div class="column" id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)"></div>
         </div>
 
     </div>
