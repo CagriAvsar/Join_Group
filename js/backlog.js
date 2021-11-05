@@ -23,27 +23,55 @@ async function init() {
     await downloadFromServer();
     allTasks = JSON.parse(backend.getItem('allTasks')) || [];
     includeHTML();
-    renderBackLogs();
+    showBackLogs();
 }
 
 // function deleteUser(name) {
 //     backend.deleteItem('users');
 // }
 
-function renderBackLogs() {
+
+function showBackLogs() {
+    let color = changeColor('red', 'yellow', 'green', 'blue');
     let backlogsContainer = document.getElementById('backlogsContainer');
     backlogsContainer.innerHTML = ``;
     for (let i = 0; i < allTasks.length; i++) {
-        let task = allTasks[i];
-        backlogsContainer.innerHTML += `
-        <a>X</a>
-        <div class="task-info-container">
-          <span>${task.title}</span>
-          <span>${task.category}</span>
-          <span>${task.description}</span>
-          <span>${task['assigned-to'][0]['e-mail']} 
-          <img src="${task['assigned-to'][0]['img']}">
-        </div>
-        `;
+        renderBackLogs(i);
     }
+}
+
+
+function renderBackLogs(i) {
+    let task = allTasks[i];
+    backlogsContainer.innerHTML += `
+<div class="task-info-container">   
+
+ <div class="assigned-container">               
+   <div>
+     <img src="${task['assigned-to'][0]['img']}" class="task-img">
+   </div>
+      <div class="backlog-title-and-email wid-30">
+          <span>${task.title}</span>
+          <a href="mailto:${task['assigned-to'][0]['e-mail']}" class="mail-link"><span>${task['assigned-to'][0]['e-mail']}</a> 
+      </div> 
+    </div>  
+      <div class="wid-20 txt-algn">${task.category}</div>
+        <div class="wid-30 over-flow-bw">${task.description}</div>
+</div>
+    `;
+
+    // if statement dont works!!
+    if (task.category.value == 'Management') {
+        color = changeColor('yellow');
+    }
+}
+
+// function changeColor(color) {
+//     return document.getElementById('backlogsContainer').style = `border-left: solid 6px ${color};`
+// }
+
+
+// Arrow function
+let changeColor = (color) => {
+    return document.getElementById('backlogsContainer').style = `border-left: solid 6px ${color};`
 }

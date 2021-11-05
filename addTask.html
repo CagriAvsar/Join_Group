@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title> Add Tasks </title>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,21 +33,21 @@
 
     <div class="overall">
         <div w3-include-html="templates/sidebar.html"></div>
-    
+
         <div class="main">
             <div class="top-container">
-                <div class="top-container-addtask"> 
+                <div class="top-container-addtask">
                     <b> Add Task </b>
                 </div>
-                <div class="top-container-text"> 
+                <div class="top-container-text">
                     <b> Learning Management System Project </b>
                 </div>
             </div>
-    
+
             <div class="lower-container">
                 <div class="lower-container-left">
                     <div class="title">
-                        <div class="lower-container-heading"> 
+                        <div class="lower-container-heading">
                             <b> TITLE </b>
                         </div>
                         <input placeholder="Add Title" class="title-input field" id="title-input"> </input>
@@ -56,7 +56,7 @@
                         <div class="lower-container-heading">
                             <b> CATEGORY </b>
                         </div>
-    
+
                         <div class="input-and-icon">
                             <div>
                                 <select placeholder="Add Category" id="category-dropdown" class="field">
@@ -70,7 +70,7 @@
                                 <button class="btn-dropdown"> <img src="imgs/chevron .png"> </button>
                             </div>
                         </div>
-    
+
                     </div>
                     <div class="description">
                         <div class="lower-container-heading">
@@ -81,65 +81,66 @@
                 </div>
                 <div class="lower-container-right">
                     <div class="due-date">
-                        <div class="lower-container-heading"> 
+                        <div class="lower-container-heading">
                             <b> DUE DATE </b>
                         </div>
-                            <div class="input-and-icon">
-                                <div class="field">
-                                    <input type="text" id="due-date-input" placeholder="Choose Date" class="field">
-                                </div>
-                                <div>
-                                    <button class="btn-dropdown"> <img src="imgs/icons8-calendar-150.png"> </button>
-                                </div>
+                        <div class="input-and-icon">
+                            <div class="field">
+                                <input type="text" id="due-date-input" placeholder="Choose Date" class="field">
                             </div>
+                            <div>
+                                <button class="btn-dropdown"> <img src="imgs/icons8-calendar-150.png"> </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="urgency">
-                        <div class="lower-container-heading"> 
+                        <div class="lower-container-heading">
                             <b> URGENCY </b>
                         </div>
-                            <div class="input-and-icon">
-                                <div>
-                                    <select placeholder="Choose Urgency" id="urgency-dropdown" class="field">
+                        <div class="input-and-icon">
+                            <div>
+                                <select placeholder="Choose Urgency" id="urgency-dropdown" class="field">
                                         <option> Very High </option>
                                         <option> High </option>
                                         <option> Middle </option>
                                         <option> Low </option>
                                 </select>
-                                </div>
-                                <div>
-                                    <button class="btn-dropdown"> <img src="imgs/chevron .png"> </button>
-                                </div>
                             </div>
+                            <div>
+                                <button class="btn-dropdown"> <img src="imgs/chevron .png"> </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="assigned-to">
-                        <div class="lower-container-heading assigned-to-heading"> 
+                        <div class="lower-container-heading assigned-to-heading">
                             <b> ASSIGNED TO </b>
                         </div>
                         <div class="assigned-to-pics-container" id="assigned-to">
-                                <img src="imgs/icon plus.png" class="btn-assigned-to" onclick="showAssignedToPics()">
-                                <div class="d-none" id="assigned-to-pics">
-                                    <img src="imgs/user1.JPG" class="assined-to-pics" onclick="addUser(0)"> 
-                                    <img src="imgs/user2.JPG" class="assined-to-pics" onclick="addUser(1)"> 
-                                    <img src="imgs/user3.JPG" class="assined-to-pics" onclick="addUser(2)">
+                            <img src="imgs/icon plus.png" class="btn-assigned-to" onclick="showAssignedToPics()">
+                            <div class="d-none" id="assigned-to-pics">
+                                <img src="imgs/user1.JPG" class="assined-to-pics" onclick="addUser(0)">
+                                <img src="imgs/user2.JPG" class="assined-to-pics" onclick="addUser(1)">
+                                <img src="imgs/user3.JPG" class="assined-to-pics" onclick="addUser(2)">
                             </div>
                         </div>
                         <div class="cancel-and-create-buttons">
                             <button onclick="cancel()" id="btn-cancel" class="btn-cancel"> <b> CANCEL </b></button>
-                            <button onclick="addTask()"id="btn-create-task" class="btn-create-task"> <b> CREATE TASK </b> </button>
+                            <button onclick="addTask()" id="btn-create-task" class="btn-create-task"> <b> CREATE TASK </b> </button>
                         </div>
-    
-    
+
+
                     </div>
                 </div>
-    
+
             </div>
-            
-            
-    
-            
+
+
+
+
         </div>
     </div>
-    
-     
-    </body>
-    </html>
+
+
+</body>
+
+</html>

@@ -10,6 +10,22 @@
     padding: 8px;
 }
 
+.txt-algn {
+    text-align: center;
+}
+
+.wid-20 {
+    width: 20%;
+}
+
+.wid-30 {
+    width: 30%;
+}
+
+.over-flow-bw {
+    overflow-wrap: break-word;
+}
+
 footer {
     position: absolute;
     bottom: 0px;
