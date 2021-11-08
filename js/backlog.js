@@ -31,8 +31,7 @@ async function init() {
 // }
 
 
-function showBackLogs() {
-    let color = changeColor('red', 'yellow', 'green', 'blue');
+function showBackLogs(i) {
     let backlogsContainer = document.getElementById('backlogsContainer');
     backlogsContainer.innerHTML = ``;
     for (let i = 0; i < allTasks.length; i++) {
@@ -43,35 +42,44 @@ function showBackLogs() {
 
 function renderBackLogs(i) {
     let task = allTasks[i];
+    let category = allTasks[i]['category'];
     backlogsContainer.innerHTML += `
 <div class="task-info-container">   
-
- <div class="assigned-container">               
-   <div>
-     <img src="${task['assigned-to'][0]['img']}" class="task-img">
-   </div>
-      <div class="backlog-title-and-email wid-30">
-          <span>${task.title}</span>
-          <a href="mailto:${task['assigned-to'][0]['e-mail']}" class="mail-link"><span>${task['assigned-to'][0]['e-mail']}</a> 
-      </div> 
+  <div class="assigned-container">               
+    <div>
+      <img src="${task['assigned-to'][0]['img']}" class="task-img">
+    </div>
+       <div class="backlog-title-and-email wid-30">
+           <span>${task.title}</span>
+           <a href="mailto:${task['assigned-to'][0]['e-mail']}" class="mail-link"><span>${task['assigned-to'][0]['e-mail']}</a> 
+       </div> 
     </div>  
       <div class="wid-20 txt-algn">${task.category}</div>
         <div class="wid-30 over-flow-bw">${task.description}</div>
 </div>
     `;
+    changeColor(category);
+}
 
-    // if statement dont works!!
-    if (task.category.value == 'Management') {
-        color = changeColor('yellow');
+function changeColor(category) {
+    let color;
+    if (category == 'Management') {
+        color = 'yellow';
+        document.getElementById('backlogsContainer').style = `border-left: solid 8px ${color};`
+    } else if (category == 'Development') {
+        color = 'green';
+        document.getElementById('backlogsContainer').style = `border-left: solid 8px ${color};`
+    } else if (category == 'Marketing') {
+        color = 'red';
+        document.getElementById('backlogsContainer').style = `border-left: solid 8px ${color};`
+    } else if (category == 'Design') {
+        color = 'rebeccapurple'
+        document.getElementById('backlogsContainer').style = `border-left: solid 8px ${color};`
     }
 }
 
-// function changeColor(color) {
+
+// // Arrow function
+// let changeColor = (color) => {
 //     return document.getElementById('backlogsContainer').style = `border-left: solid 6px ${color};`
-// }
-
-
-// Arrow function
-let changeColor = (color) => {
-    return document.getElementById('backlogsContainer').style = `border-left: solid 6px ${color};`
-}
+// },
