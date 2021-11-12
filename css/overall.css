@@ -24,12 +24,13 @@
 
 .over-flow-bw {
     overflow-wrap: break-word;
+    overflow: auto;
 }
 
 footer {
     position: absolute;
-    bottom: 0px;
-    left: 6px;
+    bottom: -65px;
+    right: 5px;
     color: darkblue;
 }
 

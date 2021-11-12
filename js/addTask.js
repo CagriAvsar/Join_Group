@@ -1,16 +1,19 @@
 /* USERS */
 
 let users = [{
+        'id': 1,
         'name': 'Marian',
         'e-mail': 'marianwill@gmail.com',
         'img': 'imgs/user1.JPG'
     },
     {
+        'id': 2,
         'name': 'Cagri',
         'e-mail': 'cagriavsa@gmail.com',
         'img': 'imgs/user2.JPG'
     },
     {
+        'id': 3,
         'name': 'Typ',
         'e-mail': 'dertyp@gmail.com',
         'img': 'imgs/user3.JPG'
@@ -21,20 +24,22 @@ let selectedUser = [];
 
 let allTasks = [];
 
-let id = [];
-
 
 /* BACKEND INTEGRATION AND LOAD USERS */
 
 async function init() {
     setURL('http://gruppe-114.developerakademie.net/smallest_backend_ever');
     await downloadFromServer();
-
+    allTasks = JSON.parse(backend.getItem('allTasks')) || [];
     includeHTML();
     pickDate();
 }
 
-
+/**
+ * Adding users with pics to the task
+ * 
+ * @param {number} index - are numbers 0, 1 and 2.
+ */
 function addUser(index) {
     selectedUser.push(users[index]);
 }
@@ -47,7 +52,7 @@ async function addTask() {
     let description = document.getElementById('description-input').value;
     let duedate = document.getElementById('due-date-input').value;
     let urgency = document.getElementById('urgency-dropdown').value;
-  
+
 
     console.log('The Title is ', title);
     console.log('The Category is ', category);
@@ -66,7 +71,6 @@ async function addTask() {
         'assigned-to': selectedUser,
         'createdate': new Date().getTime(),
         'phase': 'to-do',
-        'id': new Date().getTime()
     };
 
     allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */
@@ -75,7 +79,7 @@ async function addTask() {
 
     let AllTasksAsString = JSON.stringify(allTasks);
     backend.setItem('allTasks', AllTasksAsString);
-
+    window.location.href = 'backlog.html';
     selectedUser = []; /* setze User zurück */
 
     /* renderBackLogsTest(); */
@@ -102,24 +106,3 @@ function cancel() {
     document.getElementById('assigned-to-pics').classList.add('d-none');
     document.getElementById('assigned-to-pics').classList.remove('d-show');
 }
-
-/* PUT ARRAY IN CONTAINER */
-/*
-  function renderBackLogsTest() {
-    let backlogsContainerTest = document.getElementById('backlog-test');
-  
-    backlogsContainerTest.innerHTML = ``;
-    for (let i = 0; i < allTasks.length; i++) {
-        let task = allTasks[i];
-        backlogsContainerTest.innerHTML += `
-        <div class="backlog-test">
-          ${task['title']}
-          ${selectedUser[i]['name']}
-          ${selectedUser[i]['E-Mail']}
-           <img src="${selectedUser[i]['img']}">
-        </div>
-        `;
-    }
-}
-
-*/

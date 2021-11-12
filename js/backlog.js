@@ -65,16 +65,16 @@ function changeColor(category) {
     let color;
     if (category == 'Management') {
         color = 'yellow';
-        document.getElementById('backlogsContainer').style = `border-left: solid 8px ${color};`
+        document.querySelector('.task-info-container').style = `border-left: solid 8px ${color};`
     } else if (category == 'Development') {
         color = 'green';
-        document.getElementById('backlogsContainer').style = `border-left: solid 8px ${color};`
+        document.querySelector('.task-info-container').style = `border-left: solid 8px ${color};`
     } else if (category == 'Marketing') {
         color = 'red';
-        document.getElementById('backlogsContainer').style = `border-left: solid 8px ${color};`
+        document.querySelector('.task-info-container').style = `border-left: solid 8px ${color};`
     } else if (category == 'Design') {
         color = 'rebeccapurple'
-        document.getElementById('backlogsContainer').style = `border-left: solid 8px ${color};`
+        document.querySelector('.task-info-container').style = `border-left: solid 8px ${color};`
     }
 }
 
