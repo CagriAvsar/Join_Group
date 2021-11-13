@@ -15,17 +15,19 @@ function updateHTML() {
 
     document.getElementById('to-do').innerHTML = '';
 
-    for (let i = 0; i < allTasks.length; i++) {
-        const element = allTasks[i];
+    for (let i = 0; i < todo.length; i++) {
+        const element = todo[i];
         document.getElementById('to-do').innerHTML += generateToDoHTML(element);
     }
+
+
     // update in progress //
     let inprogress = allTasks.filter(t => t['phase'] == 'in-progress');
 
     document.getElementById('in-progress').innerHTML = '';
 
-    for (let i = 0; i < allTasks.length; i++) {
-        const element = allTasks[i];
+    for (let i = 0; i < inprogress.length; i++) {
+        const element = inprogress[i];
         document.getElementById('in-progress').innerHTML += generateToDoHTML(element);
 
         // update testing //
@@ -39,11 +41,11 @@ function startDragging(id) {
 }
 
 function generateToDoHTML(element) {
-    return `<div draggable="true" ondragstart="startDragging(${element['id']}"> ${element['title']}<div>`;
+    return `<div draggable="true" ondragstart="startDragging(${element['createdate']}"> ${element['title']} <div>`;
 }
 
-function allowDrop(ev) {
-    ev.preventDefault();
+function allowDrop(event) {
+    event.preventDefault();
 }
 
 function moveTo(phase) {

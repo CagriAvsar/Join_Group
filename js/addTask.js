@@ -1,19 +1,19 @@
 /* USERS */
 
 let users = [{
-        'id': 1,
+        /* 'id': 1, */
         'name': 'Marian',
         'e-mail': 'marianwill@gmail.com',
         'img': 'imgs/user1.JPG'
     },
     {
-        'id': 2,
+        /* 'id': 2, */
         'name': 'Cagri',
         'e-mail': 'cagriavsa@gmail.com',
         'img': 'imgs/user2.JPG'
     },
     {
-        'id': 3,
+        /* 'id': 3, */
         'name': 'Typ',
         'e-mail': 'dertyp@gmail.com',
         'img': 'imgs/user3.JPG'
@@ -81,8 +81,6 @@ async function addTask() {
     backend.setItem('allTasks', AllTasksAsString);
     window.location.href = 'backlog.html';
     selectedUser = []; /* setze User zurück */
-
-    /* renderBackLogsTest(); */
 
 }
 
