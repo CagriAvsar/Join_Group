@@ -66,13 +66,16 @@ function changeColor(category) {
     if (category == 'Management') {
         color = 'yellow';
         document.querySelector('.task-info-container').style = `border-left: solid 8px ${color};`
-    } else if (category == 'Development') {
+    }
+    if (category == 'Development') {
         color = 'green';
         document.querySelector('.task-info-container').style = `border-left: solid 8px ${color};`
-    } else if (category == 'Marketing') {
+    }
+    if (category == 'Marketing') {
         color = 'red';
         document.querySelector('.task-info-container').style = `border-left: solid 8px ${color};`
-    } else if (category == 'Design') {
+    }
+    if (category == 'Design') {
         color = 'rebeccapurple'
         document.querySelector('.task-info-container').style = `border-left: solid 8px ${color};`
     }

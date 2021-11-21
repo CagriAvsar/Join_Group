@@ -78,9 +78,9 @@ async function addTask() {
     console.log(allTasks);
 
     let AllTasksAsString = JSON.stringify(allTasks);
-    backend.setItem('allTasks', AllTasksAsString);
-    window.location.href = 'backlog.html';
+    await backend.setItem('allTasks', AllTasksAsString);
     selectedUser = []; /* setze User zurück */
+    window.location.href = 'backlog.html';
 
 }
 
