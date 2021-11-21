@@ -70,7 +70,7 @@ async function addTask() {
         'urgency': urgency,
         'assigned-to': selectedUser,
         'createdate': new Date().getTime(),
-        'phase': 'to-do',
+        'phase': 'to-do' 
     };
 
     allTasks.push(task); /* Pushe in array allTasks die Werte von tasks */

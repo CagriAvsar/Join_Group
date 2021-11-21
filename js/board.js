@@ -7,6 +7,7 @@ async function init() {
 }
 
 let currentDraggedElement = [];
+let phase = [];
 
 
 function updateHTML() {
@@ -41,7 +42,7 @@ function startDragging(id) {
 }
 
 function generateToDoHTML(element) {
-    return `<div draggable="true" ondragstart="startDragging(${element['createdate']}"> ${element['title']} <div>`;
+    return `<div draggable="true" ondragstart="startDragging(${element['createdate']})"> ${element['title']} <div>`;
 }
 
 function allowDrop(event) {
