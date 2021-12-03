@@ -50,6 +50,7 @@ function allowDrop(event) {
 }
 
 function moveTo(phase) {
-    allTasks[currentDraggedElement]['phase'] = phase; // Phase ändert sich zu "in Progress" oder anderen //
+    const task = allTasks.find( t => t.createdate === currentDraggedElement);
+    task[currentDraggedElement]['phase'] = phase; // Phase ändert sich zu "in Progress" oder anderen //
     updateHTML();
 }
