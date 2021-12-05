@@ -6,7 +6,7 @@ async function init() {
     updateHTML();
 }
 
-let currentDraggedElement = [];
+let currentDraggedElement;
 let phase = [];
 
 
@@ -50,7 +50,7 @@ function allowDrop(event) {
 }
 
 function moveTo(phase) {
-    const task = allTasks.find( t => t.createdate === currentDraggedElement);
-    task[currentDraggedElement]['phase'] = phase; // Phase ändert sich zu "in Progress" oder anderen //
+    const task = allTasks.find(t => t.createdate === currentDraggedElement);
+    task['phase'] = phase; // Phase ändert sich zu "in Progress" oder anderen //
     updateHTML();
 }
