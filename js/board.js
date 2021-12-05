@@ -30,10 +30,30 @@ function updateHTML() {
     for (let i = 0; i < inprogress.length; i++) {
         const element = inprogress[i];
         document.getElementById('in-progress').innerHTML += generateToDoHTML(element);
+    }
 
-        // update testing //
+    // update testing //
 
-        // update done //
+    let testing = allTasks.filter(t => t['phase'] == 'testing');
+
+    document.getElementById('testing').innerHTML = '';
+
+    for (let i = 0; i < testing.length; i++) {
+        const element = testing[i];
+        document.getElementById('testing').innerHTML += generateToDoHTML(element);
+
+    }
+
+     // update done //
+
+    let done = allTasks.filter(t => t['phase'] == 'done');
+
+    document.getElementById('done').innerHTML = '';
+
+    for (let i = 0; i < done.length; i++) {
+        const element = done[i];
+        document.getElementById('done').innerHTML += generateToDoHTML(element);
+
     }
 }
 
